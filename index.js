@@ -41,7 +41,7 @@ var httpServer = http.createServer(function(req, res){
         buffer += decoder.end();
         
         // select handler
-        var selectedHandler = router[trimmedPath] && router[trimmedPath].method == method ? router[trimmedPath].handler: handlers.notFound;
+        var selectedHandler = router[trimmedPath] ? router[trimmedPath]: handlers.notFound;
         
         // create the data object to send to handler
         var data = {

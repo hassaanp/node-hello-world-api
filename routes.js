@@ -6,7 +6,7 @@
 var handlers = require('./handlers');
 
 var router = {
-    'hello': { handler: handlers.hello, method: 'post'}
+    'hello': handlers.hello
 };
 
 module.exports = router;
